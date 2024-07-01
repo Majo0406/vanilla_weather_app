@@ -20,8 +20,19 @@
     <title>Vanilla Weather app</title>
   </head>
   <body>
-    <div class=".container-lg">
-      <head></head>
+    <div class=".container-lg .weather-app">
+      <head>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="search" class="search-button" />
+        </form>
+      </head>
       <main></main>
       <footer>
         This project was coded by
