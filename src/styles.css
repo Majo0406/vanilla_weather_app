@@ -1,0 +1,93 @@
+body {
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/163/original/abstract-2d-colorful-wallpaper-with-grainy-gradients.jpg?1719874056");
+    background-repeat: no-repeat;
+    background-size: cover;      
+}
+.weather-app{
+    background-color: rgba(255, 255, 255,0.4);
+    border-radius: 15px;
+    box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.3);
+    color: #292a6b;
+    font-family: "Assistant", sans-serif;
+    margin-top: 80px;
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
+}
+.weather-app h1 {
+    color: #292a6b;
+    font-size: 70px;
+    font-weight: 600;
+}
+#current-day {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+
+}
+#current-tempeture{
+    font-size: 120px;
+    font-weight: 700;
+}
+
+#current-description{
+    font-size: 35px;
+    font-weight: 350px;
+    margin-top: -30px;
+}
+#tempeture-interval{
+    font-size: 25px;
+    margin-top: 30px;
+    word-spacing:40px;
+}
+
+#rest-info{
+    background-color:rgba(255, 255, 255,0.4);
+    border-radius: 90px;
+    display: block;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 40%;
+    padding-top: 20px;
+}
+
+#rest-info .description{
+    margin-top: -20px;
+    padding-bottom: -10px;
+}
+#search-input{
+    border: 0;
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-right: 5px;
+    padding: 15px;
+    width: 30%;
+
+}
+#search-button{
+    background-color: #292a6b;
+    border: 1px #292a6b;
+    border-radius: 15px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    padding:15px 18px;
+    
+}
+#search-button:hover{
+ background-color: white;
+ border: 2px #292a6b;
+ color: #292a6b;
+ font-size: 17px;
+ font-weight: 600;
+}
+
+footer{
+    font-size: 16px;
+    font-weight: 250;
+    margin-top: 40px;
+    margin-bottom: -15px;
+
+}
