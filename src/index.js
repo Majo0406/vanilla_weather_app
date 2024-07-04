@@ -5,13 +5,26 @@ function searchCity (city) {
 
 }
 
-function weatherResponse(response){
-    let temperatureElement = document.querySelector("#current-tempeture");
-    let tempeture = Math.round(response.data.temperature.current);
+function tempInter (long, lat){
+    let apiKey = "638dfae104o02t4843b3b3d0b32d7760";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${long}&lat=${lat}&key=${apiKey}`
+    return axios.get(apiUrl).then(tempChanging);
+    
+}
+function tempChanging (response){
     let mintElement = document.querySelector("#mint");
     let maxtElement = document.querySelector("#maxt");
-    let mint = Math.round(response.data.temperature.minimum);
-    let maxt = Math.round(response.data.temperature.maximum);
+    let mint = Math.round(response.data.daily[0].temperature.minimum);
+    let maxt = Math.round(response.data.daily[0].temperature.maximum);
+    mintElement.innerHTML = mint;
+    maxtElement.innerHTML = maxt;
+
+}
+
+function weatherResponse(response){
+    let lon = tempInter(response.data.coordinates.longitude, response.data.coordinates.latitude);
+    let temperatureElement = document.querySelector("#current-tempeture");
+    let tempeture = Math.round(response.data.temperature.current);
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#current-description");
     let humidityElement = document.querySelector("#humidity");
@@ -23,8 +36,6 @@ function weatherResponse(response){
     cityElement.innerHTML = response.data.city;
     timeElement.innerHTML = formatDate(date);
     temperatureElement.innerHTML = tempeture;
-    mintElement.innerHTML = mint;
-    maxtElement.innerHTML = maxt;
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = response.data.temperature.humidity;
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
