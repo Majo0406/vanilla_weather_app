@@ -7,7 +7,7 @@ function searchCity (city) {
 
 function weatherResponse(response){
     let temperatureElement = document.querySelector("#current-tempeture");
-    let tempeture = Math.round(response.data.tempeture.current);
+    let tempeture = Math.round(response.data.temperature.current);
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#current-description");
     let humidityElement = document.querySelector("#humidity");
@@ -20,11 +20,11 @@ function weatherResponse(response){
     timeElement.innerHTML = formatDate(date);
     temperatureElement.innerHTML = tempeture;
     descriptionElement.innerHTML = response.data.condition.description;
-    humidityElement.innerHTML = response.data.tempeture.humidity;
+    humidityElement.innerHTML = response.data.temperature.humidity;
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
-    logoElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="current-tempeture-logo" />`
+    logoElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="current-tempeture-logo" />`;
 
-}´
+}
 
 function formatDate(date){
     let minutes = date.getMinutes();
