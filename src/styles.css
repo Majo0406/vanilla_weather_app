@@ -1,21 +1,21 @@
 body {
-    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/163/original/abstract-2d-colorful-wallpaper-with-grainy-gradients.jpg?1719874056");
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/550/original/sky-7232494.jpg?1720085073");
     background-repeat: no-repeat;
     background-size: cover;      
 }
 .weather-app{
-    background-color: rgba(255, 255, 255,0.4);
+    background-color: rgb(86, 3, 163);
+    opacity: 0.6;
     border-radius: 15px;
     box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.3);
-    color: #292a6b;
+    color: #ffffff;
     font-family: "Assistant", sans-serif;
     margin-top: 80px;
-    max-width: 800px;
     padding: 30px;
     text-align: center;
 }
 .weather-app h1 {
-    color: #292a6b;
+    color: #ffffff;
     font-size: 70px;
     font-weight: 600;
 }
@@ -68,26 +68,30 @@ body {
 
 }
 #search-button{
-    background-color: #292a6b;
-    border: 1px #292a6b;
+    background-color:rgb(86, 3, 163) ;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
-    color: white;
+    color:rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
     padding:15px 18px;
     
 }
 #search-button:hover{
- background-color: white;
- border: 2px #292a6b;
- color: #292a6b;
+ background-color:rgb(255, 255, 255);
+ border: 2px solid rgb(86, 3, 163);
+ color:rgb(86, 3, 163);
  font-size: 17px;
  font-weight: 600;
 }
 
 footer{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 250;
     margin-top: 40px;
     margin-bottom: -15px;
 
+}
+
+footer a {
+    color: rgb(255, 74, 210);
 }
