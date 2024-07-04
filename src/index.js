@@ -8,6 +8,10 @@ function searchCity (city) {
 function weatherResponse(response){
     let temperatureElement = document.querySelector("#current-tempeture");
     let tempeture = Math.round(response.data.temperature.current);
+    let mintempElement = document.querySelector(".mintemp");
+    let maxtempElement = document.querySelector(".maxtemp");
+    let mintemp = Math.round(response.data.temperature.minimum);
+    let maxtemp = Math.round(response.data.temperature.maximum);
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#current-description");
     let humidityElement = document.querySelector("#humidity");
@@ -19,6 +23,8 @@ function weatherResponse(response){
     cityElement.innerHTML = response.data.city;
     timeElement.innerHTML = formatDate(date);
     temperatureElement.innerHTML = tempeture;
+    mintempElement.innerHTML = mintemp;
+    maxtemp.innerHTML = maxtemp;
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = response.data.temperature.humidity;
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
