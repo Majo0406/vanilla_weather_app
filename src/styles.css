@@ -30,6 +30,11 @@ body {
     font-weight: 700;
 }
 
+#current-tempeture-logo{
+    font-size: 120px;
+    font-weight: 700;
+}
+
 #current-description{
     font-size: 35px;
     font-weight: 350px;
