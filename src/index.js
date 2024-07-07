@@ -69,7 +69,16 @@ function searchForm (event){
     searchCity(searchInput.value);
 }
 
+function darkTheme () {
+    let body = document.querySelector("body");
+        body.classList.toggle("dark");
+}
+
+
 let formInput = document.querySelector("#search-form");
 formInput.addEventListener("submit", searchForm);
 
 searchCity("Oporto");
+
+let themeButton = document.querySelector("#button");
+      themeButton.addEventListener("click", darkTheme);

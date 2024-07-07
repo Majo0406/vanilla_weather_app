@@ -3,6 +3,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+body.dark {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/553/original/12.jpg?1720085641");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .weather-app {
   background-color: rgb(86, 3, 163);
   opacity: 0.6;
@@ -10,7 +17,7 @@ body {
   box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-family: "Assistant", sans-serif;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 30px;
   text-align: center;
 }
@@ -18,6 +25,9 @@ body {
   color: #ffffff;
   font-size: 70px;
   font-weight: 600;
+}
+.dark .weather-app {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/179/original/smoke-pattern-creative-modern-graphic-design.jpg?1719877580");
 }
 #current-day {
   font-size: 18px;
@@ -82,6 +92,14 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 15px 18px;
 }
+.dark #search-button {
+  background-color: #2f025a;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  padding: 15px 18px;
+}
 #search-button:hover {
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(86, 3, 163);
@@ -89,7 +107,13 @@ body {
   font-size: 17px;
   font-weight: 600;
 }
-
+.dark #search-button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #2f025a;
+  color: #2f025a;
+  font-size: 17px;
+  font-weight: 600;
+}
 footer {
   font-size: 18px;
   font-weight: 250;
@@ -101,74 +125,48 @@ footer a {
   color: rgb(255, 74, 210);
 }
 
-:root {
-  --color-green: #00a878;
-  --color-red: #fe5e41;
-  --color-button: #fdffff;
-  --color-black: #000;
-}
-.toggleContainer {
+#theme {
+  color: rgb(47, 2, 90);
+  font-size: 18px;
+  font-weight: bold;
   position: relative;
+  left: 1690px;
+  top: 40px;
+}
+.dark #theme {
+  color: #8444c5;
+}
 
-  width: 90px;
-
+#button {
+  background-color: rgb(47, 2, 90);
+  box-shadow: inset 4px 4px 6px rgb(86, 3, 163);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 1700px;
+  top: 30px;
+  width: 60px;
   height: 30px;
 }
 
-.toggleContainer {
-  position: relative;
-  top: 40px;
-  left: 1700px;
-}
-.mode {
-  color: #5603a3;
-  position: relative;
-  right: 10px;
-}
 .toggle {
-  position: absolute;
-  width: 0;
-  height: 0;
+  background-color: rgb(77, 76, 76);
+  border-radius: 25px;
+  box-shadow: 3px 3px 8px black, -1px -3px 8px black;
+  position: relative;
+  top: 2px;
+  left: 4px;
+  width: 25px;
+  height: 25px;
+  transition: all ease-in-out;
+}
 
-  & + .switch {
-    position: relative;
-    display: block;
-    background: rgb(86, 3, 163);
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 30px;
-    border: solid 1px rgb(86, 3, 163);
-    transition: 0.5s;
-  }
-
-  &:checked + .switch {
-    background: rgb(231, 190, 240);
-    border: solid 1 px rgb(231, 190, 240);
-  }
-
-  & + .switch:before {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    background: #240231;
-
-    border-radius: 50%;
-
-    margin: 0px 2px;
-
-    left: 0%;
-
-    transition: 1s;
-  }
-
-  &:checked + .switch:before {
-    left: 100%;
-
-    transform: translate(calc(-100% - 2px), -50%);
-  }
+.dark .toggle {
+  background-color: rgb(77, 76, 76);
+  border-radius: 25px;
+  box-shadow: 3px 3px 8px black, -1px -3px 8px black;
+  position: relative;
+  left: 30px;
+  width: 25px;
+  height: 25px;
 }
