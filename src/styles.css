@@ -10,7 +10,7 @@ body {
   box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-family: "Assistant", sans-serif;
-  margin-top: 80px;
+  margin-top: 60px;
   padding: 30px;
   text-align: center;
 }
@@ -99,4 +99,76 @@ footer {
 
 footer a {
   color: rgb(255, 74, 210);
+}
+
+:root {
+  --color-green: #00a878;
+  --color-red: #fe5e41;
+  --color-button: #fdffff;
+  --color-black: #000;
+}
+.toggleContainer {
+  position: relative;
+
+  width: 90px;
+
+  height: 30px;
+}
+
+.toggleContainer {
+  position: relative;
+  top: 40px;
+  left: 1700px;
+}
+.mode {
+  color: #5603a3;
+  position: relative;
+  right: 10px;
+}
+.toggle {
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  & + .switch {
+    position: relative;
+    display: block;
+    background: rgb(86, 3, 163);
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: solid 1px rgb(86, 3, 163);
+    transition: 0.5s;
+  }
+
+  &:checked + .switch {
+    background: rgb(231, 190, 240);
+    border: solid 1 px rgb(231, 190, 240);
+  }
+
+  & + .switch:before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #240231;
+
+    border-radius: 50%;
+
+    margin: 0px 2px;
+
+    left: 0%;
+
+    transition: 1s;
+  }
+
+  &:checked + .switch:before {
+    left: 100%;
+
+    transform: translate(calc(-100% - 2px), -50%);
+  }
 }
