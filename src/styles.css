@@ -148,11 +148,21 @@ footer a {
   width: 60px;
   height: 30px;
 }
-
+.dark #button {
+  background-color: #8444c5;
+  box-shadow: inset 4px 4px 6px rgb(47, 2, 90);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 1700px;
+  top: 30px;
+  width: 60px;
+  height: 30px;
+}
 .toggle {
   background-color: rgb(77, 76, 76);
   border-radius: 25px;
-  box-shadow: 3px 3px 8px black, -1px -3px 8px black;
+  box-shadow: 3px 2px 8px black, -1px -3px 8px black;
   position: relative;
   top: 2px;
   left: 4px;
@@ -164,7 +174,7 @@ footer a {
 .dark .toggle {
   background-color: rgb(77, 76, 76);
   border-radius: 25px;
-  box-shadow: 3px 3px 8px black, -1px -3px 8px black;
+  box-shadow: 3px 1px 8px rgb(29, 29, 29), -1px -2px 8px black;
   position: relative;
   left: 30px;
   width: 25px;
